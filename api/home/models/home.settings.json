@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "name": "home"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "profession": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "address": {
+      "type": "string"
+    },
+    "certificates": {
+      "collection": "certificate"
+    },
+    "educations": {
+      "collection": "education"
+    },
+    "experiences": {
+      "collection": "experience"
+    },
+    "skills": {
+      "collection": "skill"
+    },
+    "socials": {
+      "collection": "social"
+    }
+  }
+}
